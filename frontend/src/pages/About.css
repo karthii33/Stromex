@@ -1,0 +1,74 @@
+.about-page {
+    /* Smooth Reveal Animation */
+}
+
+.about-page .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-page .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ambient Background Glow */
+.about-page .ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Image Hover Zoom */
+.about-page .img-zoom-container {
+    overflow: hidden;
+}
+
+.about-page .img-zoom {
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-page .group:hover .img-zoom {
+    transform: scale(1.05);
+}
+
+/* Premium Map Grayscale effect */
+.about-page .premium-map iframe {
+    filter: grayscale(100%) contrast(1.1) opacity(0.8);
+    transition: all 0.5s ease;
+}
+
+.about-page .premium-map:hover iframe {
+    filter: grayscale(0%) contrast(1) opacity(1);
+}
+
+/* WhatsApp Button Pulse */
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.8);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        transform: scale(0.8);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.about-page .wa-btn {
+    animation: pulse-ring 2s infinite;
+}
+
+.about-page .wa-btn:hover {
+    animation: none;
+    transform: scale(1.1);
+}

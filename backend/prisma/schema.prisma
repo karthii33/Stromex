@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id       Int      @id @default(autoincrement())
+  name     String   @db.VarChar(100)
+  email    String   @unique @db.VarChar(100)
+  password String
+  role     String   @db.VarChar(50)
+}
+
+model Lead {
+  id            Int       @id @default(autoincrement())
+  customer_name String    @db.VarChar(100)
+  company       String    @db.VarChar(100)
+  phone         String    @db.VarChar(20)
+  email         String    @db.VarChar(100)
+  requirement   String    @db.Text
+  status        String    @db.VarChar(50)
+  followup_date DateTime? @db.Date
+}
+
+model Customer {
+  id             Int      @id @default(autoincrement())
+  name           String   @db.VarChar(100)
+  gst_number     String?  @db.VarChar(50)
+  address        String?  @db.Text
+  contact_person String?  @db.VarChar(100)
+  amc_details    String?  @db.Text
+}
+
+model Ticket {
+  id            Int      @id @default(autoincrement())
+  customer_name String   @db.VarChar(100)
+  issue         String   @db.Text
+  assigned_to   String?  @db.VarChar(100)
+  status        String   @db.VarChar(50)
+  created_at    DateTime @default(now())
+}
+
+model Contact {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(100)
+  email     String   @db.VarChar(100)
+  phone     String   @db.VarChar(20)
+  subject   String   @db.VarChar(255)
+  message   String   @db.Text
+  status    String   @default("new") @db.VarChar(50)
+  created_at DateTime @default(now())
+}

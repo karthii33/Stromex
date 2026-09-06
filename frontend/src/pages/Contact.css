@@ -1,0 +1,75 @@
+.contact-page {
+    /* Scoped container */
+}
+
+/* Smooth Reveal Animation */
+.contact-page .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-page .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Premium Dark Hero Background */
+.contact-page .contact-hero {
+    background: linear-gradient(to bottom right, #020617, #0f172a, #1e293b);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle Light Orbs in Background */
+.contact-page .hero-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* Sleek Form Inputs */
+.contact-page .modern-input {
+    width: 100%;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    color: #0f172a;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.contact-page .modern-input::placeholder {
+    color: #94a3b8;
+}
+
+.contact-page .modern-input:focus {
+    background-color: #ffffff;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* Info Card Hover Effect */
+.contact-page .info-card {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-page .info-card:hover {
+    transform: translateX(8px);
+    background-color: #ffffff;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+    border-color: #e2e8f0;
+}
+
+/* Map Grayscale effect for a cleaner look */
+.contact-page .premium-map iframe {
+    filter: grayscale(100%) contrast(1.1) opacity(0.8);
+    transition: all 0.5s ease;
+}
+
+.contact-page .premium-map:hover iframe {
+    filter: grayscale(0%) contrast(1) opacity(1);
+}

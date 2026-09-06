@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="StromeXAI Tech Solutions - Premium AI-Driven IT Infrastructure, Cloud Security, and Enterprise Technology Solutions." />
+    <title>StromeXAI Tech Solutions — AI-Powered IT Excellence</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Premium Fonts: Outfit + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+
+    <!-- AnimeJS for text animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <style>
+      /* Tailwind config for custom brand colors */
+      :root {
+        --color-brand-navy: #054494;
+        --color-brand-orange: #FF6E04;
+        --color-brand-sky: #02A2F0;
+      }
+      /* Prevent FOUC */
+      body { opacity: 0; transition: opacity 0.3s ease; }
+      body.loaded { opacity: 1; }
+    </style>
+    <script>
+      window.addEventListener('load', () => document.body.classList.add('loaded'));
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
