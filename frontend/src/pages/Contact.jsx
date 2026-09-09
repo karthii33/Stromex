@@ -1,4 +1,7 @@
 import { useRef } from 'react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+
+const API = import.meta.env.VITE_API_URL || '';
 import './Contact.css';
 
 const Contact = () => {
@@ -16,7 +19,7 @@ const Contact = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/api/contacts', {
+            const response = await fetch(`${API}/api/contacts`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

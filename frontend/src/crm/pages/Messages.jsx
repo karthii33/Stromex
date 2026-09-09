@@ -1,6 +1,8 @@
 import { useCallback, useState, useEffect } from 'react';
 import '../crm.css';
 
+const API = import.meta.env.VITE_API_URL || '';
+
 const Messages = () => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -10,7 +12,7 @@ const Messages = () => {
 
   const fetchMessages = useCallback(async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/contacts');
+      const response = await fetch(`${API}/api/contacts`);
       if (!response.ok) throw new Error('Failed to fetch messages');
       const data = await response.json();
       setMessages(data);
@@ -27,7 +29,7 @@ const Messages = () => {
 
   const updateStatus = async (id, newStatus) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/contacts/${id}`, {
+      const response = await fetch(`${API}/api/contacts/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

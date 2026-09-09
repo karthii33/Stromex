@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import '../crm.css';
 
-const API = 'http://localhost:5000';
+const API = import.meta.env.VITE_API_URL || '';
 
 const Dashboard = () => {
   const [stats, setStats] = useState(null);
