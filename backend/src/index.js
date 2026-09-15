@@ -20,6 +20,10 @@ app.use('/api/customers', customersRoutes);
 app.use('/api/tickets', ticketsRoutes);
 app.use('/api/contacts', contactsRoutes);
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Stromex CRM Backend API is running', status: 'ok' });
+});
+
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
