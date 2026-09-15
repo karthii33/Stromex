@@ -70,16 +70,18 @@ h1, h2, h3, h4, h5 {
 
 .logo-img {
     height: auto;
-    max-height: 52px;
+    max-height: 56px;
     width: auto;
-    max-width: 220px;
+    max-width: 260px;
     object-fit: contain;
-    filter: drop-shadow(0 2px 8px rgba(5,68,148,0.12));
-    transition: transform 0.3s ease;
+    mix-blend-mode: multiply;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.95;
 }
 
 .logo-link:hover .logo-img {
     transform: scale(1.03);
+    opacity: 1;
 }
 
 .nav-links {
@@ -266,12 +268,13 @@ h1, h2, h3, h4, h5 {
 
 .footer-logo {
     height: auto;
-    max-height: 64px;
+    max-height: 56px;
     width: auto;
-    max-width: 220px;
+    max-width: 240px;
     object-fit: contain;
     margin-bottom: 1.5rem;
-    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3)) brightness(1.15);
+    mix-blend-mode: screen;
+    opacity: 0.95;
 }
 
 .footer-tagline {
