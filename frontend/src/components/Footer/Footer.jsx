@@ -7,7 +7,9 @@ const Footer = () => {
             <div className="footer-container">
                 {/* Branding Column */}
                 <div>
-                    <img src={logo} alt="StromeXai Logo" className="footer-logo" />
+                    <div className="footer-logo-wrap">
+                        <img src={logo} alt="StromeXai Logo" className="footer-logo" />
+                    </div>
                     <p className="footer-tagline">
                         Your trusted IT Solutions Provider and Authorized Reseller for Apple, Dell, Lenovo, HP, Cisco, Sophos, Fortinet, and more.
                     </p>

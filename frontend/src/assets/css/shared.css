@@ -266,15 +266,22 @@ h1, h2, h3, h4, h5 {
     z-index: 1;
 }
 
+.footer-logo-wrap {
+    display: inline-block;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 6px 14px;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+
 .footer-logo {
     height: auto;
-    max-height: 100px;
+    max-height: 70px;
     width: auto;
-    max-width: 320px;
+    max-width: 280px;
     object-fit: contain;
-    margin-bottom: 1.2rem;
-    mix-blend-mode: screen;
-    opacity: 1;
+    display: block;
 }
 
 .footer-tagline {
